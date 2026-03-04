@@ -16,7 +16,7 @@ public class BST implements BSTInterface
     }
 
     /**
-     * @return current number of nodes in the tree
+     * return current number of nodes in the tree
      */
     public int size()
     {
@@ -24,7 +24,7 @@ public class BST implements BSTInterface
     }
 
     /**
-     * @return true if the tree contains no nodes
+     * return true if the tree contains no nodes
      */
     public boolean isEmpty()
     {
@@ -34,18 +34,14 @@ public class BST implements BSTInterface
     /**
      * Add a value to the tree.  Duplicates are allowed and placed on the left
      * side (<= relationship).
-     * @param newVal value to insert
      */
     public void add(Comparable newVal)
     {
         root = addHelper(root, newVal);
     }
 
-    /**
-     * Recursively insert into subtree rooted at current.
-     * @param current current subtree root
-     * @param newVal value to insert
-     * @return new subtree root after insertion
+    /*
+    Recursively insert into subtree rooted at current.
      */
     private TreeNode addHelper(TreeNode current, Comparable newVal)
     {
@@ -66,9 +62,7 @@ public class BST implements BSTInterface
     }
 
     /**
-     * Search for a value in the tree.
-     * @param toFind value to look for
-     * @return true if found, false otherwise
+     Search for a value in the tree.
      */
     public boolean find(Comparable toFind)
     {
@@ -89,8 +83,7 @@ public class BST implements BSTInterface
     }
 
     /**
-     * Replace old value with toAdd.  If old exists, delete it then insert toAdd,
-     * returning true.  If old not found, insert toAdd and return false.
+     Replace old value with toAdd.  If old exists, delete it then insert toAdd. returning true.  If old not found, insert toAdd and return false.
      */
     public boolean replace(Comparable old, Comparable toAdd)
     {
@@ -209,4 +202,4 @@ public class BST implements BSTInterface
         postOrderHelper(current.getRight());
         System.out.print(current.getValue() + " ");
     }
-}
+} //end of the BST class 
